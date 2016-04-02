@@ -1,0 +1,30 @@
+<div class="login-back">
+<div class="notice text-center">
+		<% if !flash[:notice].blank? %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end %>
+	</div>
+
+
+<%= error_messages_for(@goal) %>
+	<div class="login-box">
+	<div class="loginPanel">
+
+	<%= form_for(:goal, :url => {:action => 'update_complete_goal', :id => @goal.id, :user_id => @user.id}) do |f| %>
+		
+		<p>Have you achieved this goal?</p>
+
+		<p class="reference-name"><%= @goal.title %></p>
+
+		<%= f.hidden_field :achieved, :value => true %>
+
+		<div class="form-buttons">
+			<%= submit_tag("Mark as done") %>
+		</div>
+
+	<% end %>
+	</div>
+	</div>
+</div>

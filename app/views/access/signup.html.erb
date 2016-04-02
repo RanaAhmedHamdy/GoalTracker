@@ -1,0 +1,40 @@
+
+<div class="login-back">
+<%= error_messages_for(@user) %>
+	<div class="login-box">
+	<div class="loginPanel">
+	<%= form_for(:user, :url => {:action => 'attempt_signup'}) do |f| %>
+		<table  summary="Subject form fields">
+			<tr>
+				<th>First name</th>
+				<td><%= f.text_field(:first_name) %></td>
+			</tr>
+			<tr>
+				<th>Last name</th>
+				<td><%= f.text_field(:last_name) %></td>
+			</tr>
+			<tr>
+				<th>Country</th>
+				<td><%= f.country_select(:country) %></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><%= f.text_field(:email) %></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><%= f.text_field(:password) %></td>
+			</tr>
+			<tr>
+				<th>Password Confirmation</th>
+				<td><%= f.text_field(:password_confirmation) %></td>
+			</tr>
+		</table>
+
+		<div class="form-buttons">
+			<%= submit_tag("Sign Up") %>
+		</div>
+</div>
+	<% end %>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<div class="login-back">
+<div class="notice text-center">
+		<% if !flash[:notice].blank? %>
+		<div class="notice">
+			<%= flash[:notice] %>
+		</div>
+		<% end %>
+	</div>
+
+
+	<div class="login-box">
+		<div class="loginPanel">
+			<%= form_tag(:action => 'attempt_login') do %>
+			<table  summary="Subject form fields">
+				<tr>
+					<th>Email</th>
+					<td><%= text_field_tag(:email) %></td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td><%= password_field_tag(:password) %></td>
+				</tr>
+			</table>
+
+			<div class="form-buttons">
+				<%= submit_tag("Log In") %>
+			</div>
+			<% end %>
+		</div>
+	</div>	
+</div>

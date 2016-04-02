@@ -1,0 +1,112 @@
+.navbar-custom {
+	width: 1300px;
+    color: #FFFFFF;
+    background-color: #E0F2F7;
+}
+
+.middle-custom {
+	color: #FFFFFF;
+	width: 1300px;
+	margin: 0px;
+    height: 420px;
+    padding-top: 100px;
+    background: image-url('Sea.jpg');
+}
+
+.lower-part {
+	width: 1300px;
+	background-color: #E0F2F7;
+	height: 220px;
+	padding-top: 40px;
+}
+
+.login-back {
+	background: image-url('Sea.jpg');
+	height: 720px;
+	margin: 0px;
+}
+
+.title {
+	margin-top: 20px;
+	color: #FFFFFF;
+	padding: 10px;
+	background-color: #08088A;
+}
+
+.sidebar {
+	margin-top: 20px; 
+	margin-left: 10px;
+	padding: 10px;
+	color: #000000;
+}
+
+.header-table {
+	height: 20px;
+	background-color: #08088A;
+	color: #FFFFFF;
+}
+
+.table-bordered {
+	margin: 0px;
+	width: 800px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    min-height: 650px;
+	background-color: #E0F8F7;
+}
+
+.table-back {
+	margin-top: 20px;
+	padding: 0px;
+	width: 800px;
+	min-height: 650px;
+	background-color: #EFFBFB;
+}
+
+.all {
+	min-height: 650px;
+	background-color: #FFFFFF;
+}
+
+.login-box {
+	margin-left: auto;
+margin-right: auto;
+width: 500px;
+padding-top: 95px;
+}
+
+.loginPanel {
+    border-radius: 4px;
+    padding: 20px 20px 20px;
+    text-align: left;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+td, th {
+    padding: 5px;
+}
+
+li {
+	margin-left: 10px;
+    padding: 5px;
+}
+
+.notice {
+	color: #FF0000;
+	font-size: 20px;
+	background-color: #81F7F3;
+}
+
+/* Errors */
+.field_with_errors { }
+.field_with_errors label { color: #AA0000; }
+.field_with_errors input { border: 1px solid #AA0000;}
+#errorExplanation { width: 382px; padding: 0; margin: 0 auto 1.5em;
+  border: 1px solid #AA0000; background-color: #FFFFFF; font-size: 12px; }
+#errorExplanation h2 { font-weight: bold; font-size: 12px;
+  padding: 5px 5px 5px 15px; margin: 0; width: 380px;
+  background-color: #AA0000; color: #FFFFFF; }
+#errorExplanation p { color: #333333; margin: 0; padding: 3px 0.5em; }
+#errorExplanation ul { margin-top: 0; }
+#errorExplanation ul li { list-style: square; }

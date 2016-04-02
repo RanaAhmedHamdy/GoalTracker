@@ -1,0 +1,35 @@
+
+<div class="login-back">
+<%= error_messages_for(@goal) %>
+	<div class="login-box">
+	<div class="loginPanel">
+	<%= form_for(:goal, :url => {:action => 'create', :user_id => @user.id}) do |f| %>
+		<table  summary="Subject form fields">
+			<tr>
+				<th>Title</th>
+				<td><%= f.text_field(:title) %></td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td><%= f.text_area(:description) %></td>
+			</tr>
+			<tr>
+				<th>Start date</th>
+				<td><%= f.date_select(:start_date) %></td>
+			</tr>
+			<tr>
+				<th>End date</th>
+				<td><%= f.date_select(:end_date) %></td>
+			</tr>
+			<tr>
+				<td><%= f.hidden_field :user_id%></td>
+			</tr>
+		</table>
+
+		<div class="form-buttons">
+			<%= submit_tag("Create Goal") %>
+		</div>
+</div>
+	<% end %>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+
+<div class="all">
+	<h2 class="title">Goals</h2>
+	<div>
+	<ul class="col-md-2 sidebar">
+		<li><%= link_to("Inprogress Goals", {:action => 'index', :user_id => @user.id}, :class => 'action new') %></li>
+		<li><%= link_to("Add New Goal", {:action => 'new', :user_id => @user.id}, :class => 'action new') %></li>
+		<li><%= link_to("Achieved Goals", {:action => 'achieved_goals', :user_id => @user.id}, :class => 'action new') %></li>
+	</ul>
+	<div class="col-md-10 table-back">
+	<table class="table-bordered" summary="Subject list">
+		<tr class="header-table">
+		<th class="col-lg-3">Goal</th>
+		<th class="col-lg-3">Description</th>
+		<th class="col-lg-3">Start date</th>
+		<th class="col-lg-3">End date</th>
+		</tr>
+		<% @goals.each do |goal| %>
+		<tr class="success">
+			<td><%= goal.title %></td>
+			<td><%= goal.description %></td>
+			<td class="center"><%= goal.start_date %></td>
+			<td class="center"><%= goal.end_date %></td>
+		</tr>
+		<% end %>
+	</table>
+	</div>
+	</div>
+</div>

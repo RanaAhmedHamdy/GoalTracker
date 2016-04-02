@@ -1,0 +1,38 @@
+
+<div class="all">
+	<h2 class="title">Goals</h2>
+	<div>
+	<ul class="col-md-2 sidebar">
+		<li><%= link_to("Incomplete Goals", {:action => 'index', :user_id => @user.id}, :class => 'action new') %></li>
+		<li><%= link_to("Add New Goal", {:action => 'new', :user_id => @user.id}, :class => 'action new') %></li>
+		<li><%= link_to("Achieved Goals", {:action => 'achieved_goals', :user_id => @user.id}, :class => 'action new') %></li>
+	</ul>
+	<div class="col-md-10 table-back">
+	<table class="table-bordered" summary="Subject list">
+		<tr class="header-table">
+		<th class="col-lg-2">Goal</th>
+		<th class="col-lg-3">Description</th>
+		<th class="col-lg-2">Start date</th>
+		<th class="col-lg-2">End date</th>
+		<th class="col-lg-3">Actions</th>
+		</tr>
+		<% @goals.each do |goal| %>
+		<tr>
+			<td><div style="height:50px; overflow:hidden"><%= goal.title %></div></td>
+			<td><div style="height:50px; overflow:hidden"><%= goal.description %></div></td>
+			<td class="center"><div style="height:50px; overflow:hidden"><%= goal.start_date %></div></td>
+			<td class="center"><div style="height:50px; overflow:hidden"><%= goal.end_date %></div></td>
+			<td class="actions">
+			<div style="height:50px; overflow:hidden">
+				<%= link_to("Show", {:action => 'show', :id => goal.id, :user_id => @user.id}, :class => 'btn btn-success btn-xs') %>
+				<%= link_to("Edit", {:action => 'edit', :id => goal.id, :user_id => @user.id}, :class => 'btn btn-primary btn-xs') %>
+				<%= link_to("Delete", {:action => 'delete', :id => goal.id, :user_id => @user.id}, :class => 'btn btn-danger btn-xs') %>
+				<%= link_to("Done", {:action => 'complete_goal', :id => goal.id, :user_id => @user.id}, :class => 'btn btn-success btn-xs') %>
+				</div>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+	</div>
+	</div>
+</div>

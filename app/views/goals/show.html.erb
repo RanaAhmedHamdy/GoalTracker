@@ -1,0 +1,26 @@
+
+<div class="login-back">
+<%= error_messages_for(@goal) %>
+	<div class="login-box">
+	<div class="loginPanel">
+	<table summary="Subject detail view">
+		<tr>
+			<th>Title</th>
+			<td><%= @goal.title %></td>
+		</tr>
+		<tr>
+			<th>Description</th>
+			<td><div style="width:300px; word-wrap:break-word;"><%= @goal.description %></div></td>
+		</tr>
+		<tr>
+			<th>Start date</th>
+			<td><%= @goal.start_date %></td>
+		</tr>
+		<tr>
+			<th>End date</th>
+			<td><%= @goal.end_date %></td>
+		</tr>
+	</table>
+	</div>
+	</div>
+</div>
